@@ -15,7 +15,7 @@ A full-stack e-commerce web application featuring a modern React frontend and a 
 
 ### Backend (Server)
 - **Core:** Node.js, Express.js
-- **Database ORM:** Prisma (configured with Supabase / PostgreSQL)
+- **Database ORM:** Prisma (configured with PostgreSQL)
 - **Authentication:** JSON Web Tokens (JWT) & BcryptJS
 - **Image Storage:** Cloudinary
 - **Payment Processing:** Stripe Node SDK
@@ -54,8 +54,9 @@ bun install
 
 Create a `.env` file in the `server` directory and add the following environment variables:
 ```env
-DATABASE_URL="your-postgresql-database-url"
-DIRECT_URL="your-postgresql-direct-url" # For Supabase direct connection
+# Local PostgreSQL Connection String
+DATABASE_URL="postgresql://postgres:your_password@localhost:5432/your_database_name?schema=public"
+
 JWT_SECRET="your-jwt-secret-key"
 CLOUDINARY_CLOUD_NAME="your-cloudinary-cloud-name"
 CLOUDINARY_API_KEY="your-cloudinary-api-key"
